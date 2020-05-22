@@ -46,7 +46,7 @@ legend("topright", col = c("black","red","blue"), lty = 1, bty = "n",
 # Fourth Plot
 # plot the values of Global_reactive_power using type 'l' to plot lines. Name axes correspondingly.
 plot(household$Global_reactive_power, type = "o", xlab = "", xaxt = "none",
-     ylab = "Global_reactive_power", pch = 20)
+     ylab = "Global_reactive_power", pch = 20, lwd = 0.5)
 # add ticks to x axis with weekdays
 axis(1, at = c(1, dim(household)[1]/2, dim(household)[1]),labels = c("Thu", "Fri","Sat"))
 dev.off()
