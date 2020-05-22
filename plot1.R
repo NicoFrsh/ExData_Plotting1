@@ -10,3 +10,9 @@ household$Time <- hms(household$Time)
 
 # subset data to get only observations from 2007-02-01 and 2007-02-02
 household <- subset(household, household$Date == "2007-02-01" | household$Date == "2007-02-02")
+
+# plot histogram of global active power
+png(filename = "plot1.png", width = 480, height = 480)
+hist(household$Global_active_power, main = "Global Active Power", xlab = "Global Active Power (kilowatts)",
+     col = "#FF3300")
+dev.off()
